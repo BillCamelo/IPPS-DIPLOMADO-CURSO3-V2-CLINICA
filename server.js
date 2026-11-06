@@ -4,6 +4,7 @@ import cors from 'cors'
 import { conectar } from 'config/db.js'
  
 import { authRoutes } from './routes/auth.route.js'
+import { pacienteRoutes } from './routes/paciente.route.js'
 
 const app = express()
 
@@ -14,6 +15,8 @@ app.use(express.json())
 app.use('/auth', authRoutes)
 //http://localhost:3001/auth/registrar/
 //http://localhost:3001/auth/login/
+
+app.use('/pacientes', pacienteRoutes)
 
 await conectar()
 
