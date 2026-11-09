@@ -33,5 +33,5 @@ app.use((err, req, res, next) => {
 await conectar()
 
 app.listen(3001, ()=>{
-    console.log('levantmos al apu')
+  console.log('¡Servidor levantado con éxito!')
 })
